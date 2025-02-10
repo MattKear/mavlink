@@ -79,6 +79,15 @@
         <param index="6">Empty.</param>
         <param index="7">Empty.</param>
       </entry>
+      <entry value="41100" name="MAV_CMD_DO_CONTAINMENT_MANAGER">
+        <description>Begin monitoring containment from the mission path. Vehicle will pause mission if radius error is exceeded. </description>
+        <param index="1" label="Active" minValue="0" maxValue="2" increment="1">0: Disabled. 1: Monitoring Only. 2: Active Control (Pause)</param>
+        <param index="2" label="Radius" units="m">Acceptable radius from mission path, defined in the plane normal to the mission leg</param>
+        <param index="4">Empty.</param>
+        <param index="5">Empty.</param>
+        <param index="6">Empty.</param>
+        <param index="7">Empty.</param>
+      </entry>
       <entry value="42000" name="MAV_CMD_POWER_OFF_INITIATED" hasLocation="false" isDestination="false">
         <description>A system wide power-off event has been initiated.</description>
         <param index="1">Empty.</param>
