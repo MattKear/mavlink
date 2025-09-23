@@ -874,10 +874,10 @@
         <param index="6" label="X Offset" units="m">X offset from target</param>
         <param index="7" label="Y Offset" units="m">Y offset from target</param>
       </entry>
-      <entry value="34" name="MAV_CMD_NAV_WAYPOINT_ARC" hasLocation="true" isDestination="true">
-        <description>Define a circular arc for the vehicle to navigate around. This is intended for use in missions. A MAV_CMD_NAV_WAYPOINT is required before this command for the complete definition of the arc. The location of this waypoint defines the centre point of the arc. The 3D distance relative to the prior waypoint defines the arc radius. The previous waypoint defines the start of the arc. The exit position for the arc is then defined by the arc angle, in param 1.</description>
-        <param index="1" label="Arc Angle" units="deg" minValue="0" maxValue="359" increment="1">The angle in degrees from the starting position to the exit position of the arc. Defined cw positive.</param>
-        <param index="2">Empty</param>
+      <entry value="34" name="MAV_CMD_NAV_ARC_WAYPOINT" hasLocation="true" isDestination="true">
+        <description>Define a circular arc for the vehicle to navigate around. This is intended for use in missions. The location of this waypoint defines the exit position of the arc. A MAV_CMD_NAV_WAYPOINT is required before this command and defines the start position of the arc. The arc angle is then defined by param 2.  This defines a circular arc in NE, with the difference in height being defined by the difference in waypoint altitudes.</description>
+        <param index="1" label="Hold" units="s" minValue="0">Hold time at destination waypoint.</param>
+        <param index="2" label="Arc Angle" units="deg" minValue="-359" maxValue="359" increment="1">The angle in degrees from the starting position to the exit position of the arc. Defined cw positive, use negative numbers for CCW arcs.</param>
         <param index="3">Empty</param>
         <param index="4">Empty</param>
         <param index="5" label="Latitude">Latitude</param>
